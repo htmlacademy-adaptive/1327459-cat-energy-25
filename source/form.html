@@ -37,18 +37,27 @@
       <p class="main-text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <!-- Форма для подбора программы питания -->
       <form class="nutrition-form" action="https://echo.htmlacademy.ru" method="get">
+        <h2 class="visually-hidden">Анкета для подбора программы питания</h2>
         <!-- Основные данные кота -->
         <fieldset class="nutrition-form__group">
           <legend class="visually-hidden">Основные данные</legend>
-          <label class="nutrition-form__label">Имя:*
-            <input class="nutrition-form__input" type="text" name="cat-name" value="Барсик" required>
-          </label>
-          <label class="nutrition-form__label">Вес (кг):*
-            <input class="nutrition-form__input" type="text" name="cat-weight" value="7" required>
-          </label>
-          <label class="nutrition-form__label">Возраст (лет):
-            <input class="nutrition-form__input" type="text" name="cat-age" value="7">
-          </label>
+          <ul class="nutrition-form__list">
+            <li class="nutrition-form__item">
+              <label class="nutrition-form__label">Имя:*
+                <input class="nutrition-form__input" type="text" name="cat-name" value="Барсик" required>
+              </label>
+            </li>
+            <li class="nutrition-form__item">
+              <label class="nutrition-form__label">Вес (кг):*
+                <input class="nutrition-form__input" type="text" name="cat-weight" value="7" required>
+              </label>
+            </li>
+            <li class="nutrition-form__item">
+              <label class="nutrition-form__label">Возраст (лет):
+                <input class="nutrition-form__input" type="text" name="cat-age" value="7">
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <!-- Цель программы -->
         <fieldset class="nutrition-form__group">
@@ -74,8 +83,52 @@
         <!-- Контактные данные владельца -->
         <fieldset class="nutrition-form__group">
           <legend class="nutrition-form__legend">Контактные данные (владельца кота)</legend>
-
+          <ul class="nutrition-form__list">
+            <li class="nutrition-form__item">
+              <label class="nutrition-form__label">E-mail:*
+                <input class="nutrition-form__input nutrition-form__input--email" type="email" name="email" value="kuklachev@gmail.com" required>
+              </label>
+            </li>
+            <li class="nutrition-form__item">
+              <label class="nutrition-form__label">Телефон:*
+                <input class="nutrition-form__input nutrition-form__input--phone" type="tel" name="phone-number" value="8 (960) 900-60-90" required>
+              </label>
+            </li>
+          </ul>
         </fieldset>
+        <!-- Комментарий -->
+        <fieldset class="nutrition-form__group">
+          <legend class="nutrition-form__legend">Комментарий</legend>
+          <textarea class="nutrition-form__input" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <!-- Дополнительно -->
+        <fieldset class="nutrition-form__group">
+          <legend class="nutrition-form__legend">Дополнительно</legend>
+          <ul class="nutrition-form__list">
+            <li class="nutrition-form__item">
+              <label class="nutrition-form__label">Сахарозаменитель
+                <input class="nutrition-form__input" type="checkbox" name="sweetener" checked>
+              </label>
+            </li>
+            <li class="nutrition-form__item">
+              <label class="nutrition-form__label">Питьевая вода
+                <input class="nutrition-form__input" type="checkbox" name="drinking-water">
+              </label>
+            </li>
+            <li class="nutrition-form__item">
+              <label class="nutrition-form__label">Молоко
+                <input class="nutrition-form__input" type="checkbox" name="milk">
+              </label>
+            </li>
+            <li class="nutrition-form__item">
+              <label class="nutrition-form__label">Витамины
+                <input class="nutrition-form__input" type="checkbox" name="vitamins">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="nutrition-form__button button" type="submit">Отправить заявку</button>
+        <p class="nutrition-form__note">* — Обязательные поля</p>
       </form>
       <!-- Секция "Дилеры" -->
       <section class="invite-card">
