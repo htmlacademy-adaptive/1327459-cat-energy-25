@@ -17,6 +17,68 @@
 
   &__text {
     margin: 0;
+    padding-left: 80px;
+    position: relative;
+
+    &--organic::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: @green;
+      background-image: url("../../img/features/organic.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--simple::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: @green;
+      background-image: url("../../img/features/simple.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--easy::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: @green;
+      background-image: url("../../img/features/easy.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--quick::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: @green;
+      background-image: url("../../img/features/quick.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   &__list {
@@ -26,8 +88,6 @@
   }
 
   &__item {
-    padding-left: 80px;
-
     &:not(:last-child) {
       margin-bottom: 20px;
     }
