@@ -3,13 +3,20 @@
   font-size: 14px;
   line-height: 18px;
   color: @darkgray;
+  margin-bottom: 20px;
 
   &__list {
     list-style-type: none;
+    padding: 0;
   }
 
   &__item {
     background-color: @lightgray;
+    padding: 21px 20px 18px 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
@@ -19,6 +26,16 @@
     line-height: 37px;
     text-transform: uppercase;
     color: @black;
+    margin: 0;
+    margin-bottom: 29px;
+    padding-left: 71px;
+  }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 15px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid @specialgray-2;
   }
 
   &__link {

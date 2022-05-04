@@ -3,6 +3,7 @@
   font-size: 14px;
   line-height: 18px;
   color: @darkgray;
+  margin-bottom: 49px;
 
   &__title {
     font-family: "Oswald", sans-serif;
@@ -10,9 +11,25 @@
     font-size: 36px;
     line-height: 40px;
     color: @black;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin: 0;
   }
 
   &__list {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    padding-left: 80px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }

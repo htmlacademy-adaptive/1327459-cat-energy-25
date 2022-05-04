@@ -4,17 +4,42 @@
   font-weight: 400;
   line-height: 14px;
   color: @white;
-  background-color: @green;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &__wrapper {
+    background-color: fade(@green, 85%);
+    min-height: 302px;
+    width: calc(100% + 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__title {
     font-weight: 400;
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 25px;
+    margin-top: 27px;
+    text-align: center;
+    width: 280px;
   }
 
   &__text {
     text-transform: uppercase;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 280px;
+  }
+
+  &__image {
+    color: @black;
+  }
+
+  &__button {
+    width: 100%;
   }
 }
