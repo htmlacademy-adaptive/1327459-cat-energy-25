@@ -10,12 +10,15 @@
   margin-bottom: 20px;
 
   &__wrapper {
-    background-color: fade(@green, 85%);
     min-height: 302px;
     width: calc(100% + 40px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(to left, fade(@green, 85%), fade(@green, 85%)), url("../../img/main-card-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 375px;
   }
 
   &__title {
