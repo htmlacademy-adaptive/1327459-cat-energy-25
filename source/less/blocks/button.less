@@ -1,5 +1,5 @@
 .button {
-  background-color: @green;
+  background-color: @basic;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -11,6 +11,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    background-color: darken(saturate(spin(@basic, -0.2497), 3.5440), 4.3137);
+  }
 
   &--secondary {
     background-color: @lightgray;
