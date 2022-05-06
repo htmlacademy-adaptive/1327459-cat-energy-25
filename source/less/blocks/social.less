@@ -1,20 +1,32 @@
 .social {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid @specialgray-2;
+  border-bottom: 1px solid @specialgray-2;
+
   &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    display: flex;
+    padding: 5px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
   }
 
   &__link {
-    font-family: "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 18px;
+    display: block;
     color: @darkgray;
     text-decoration: none;
+    padding: 5px;
   }
 
   &__icon {
+    display: block;
     color: @icongray;
   }
 }
