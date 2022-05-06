@@ -1,13 +1,86 @@
 .main-nav {
-  outline: 3px solid rgb(69, 43, 219);
-  outline-offset: -3px;
+  // outline: 3px solid rgb(69, 43, 219);
+  // outline-offset: -3px;
+  position: relative;
+
+  &--nojs {
+    .main-nav__toggle {
+      display: none;
+    }
+  }
+
+  &--closed {
+    .main-nav__toggle::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background-color: @black;
+      top: 0;
+      left: 0;
+      box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+    }
+
+    @media (max-width: @mobile-width-only) {
+      .main-nav__list {
+        display: none;
+      }
+    }
+  }
+
+  &--opened {
+    .main-nav__list {
+      position: absolute;
+      width: calc(100% + 2 * @padding-mobile);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .main-nav__toggle::before,
+    .main-nav__toggle::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: @black;
+      top: 50%;
+      left: 50%;
+    }
+
+    .main-nav__toggle::before {
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    .main-nav__toggle::after {
+      transform: translateX(-50%) rotate(-45deg);
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    top: -40px;
+    left: calc(100% - 25px);
+    z-index: 1;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 18px;
+    border: none;
+    background-color: transparent;
+  }
 
   &__list {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    outline: 3px solid rgb(219, 43, 125);
-    outline-offset: -3px;
+    // outline: 3px solid rgb(219, 43, 125);
+    // outline-offset: -3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: @white;
   }
 
   &__item {
@@ -16,10 +89,19 @@
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
+    border-top: 1px solid @specialgray-3;
+    padding: 10px;
+    // outline: 2px solid lime;
+    // outline-offset: -2px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  a {
+  &__link {
+    display: block;
     color: @black;
     text-decoration: none;
+    padding: 12px;
+    text-align: center;
   }
 }
