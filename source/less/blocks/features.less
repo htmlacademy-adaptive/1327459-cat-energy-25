@@ -4,7 +4,13 @@
   line-height: 18px;
   color: @darkgray;
   padding-top: 20px;
-  padding-bottom: 49px;
+  padding-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   &__title {
     font-family: "Oswald", sans-serif;
@@ -14,6 +20,12 @@
     color: @black;
     margin: 0;
     margin-bottom: 30px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 32px;
+    }
   }
 
   &__text {
@@ -21,51 +33,46 @@
     padding-left: 80px;
     position: relative;
 
-    &--organic::before {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 60px;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: @basic;
-      background-image: url("../../img/features/organic.svg");
-      background-repeat: no-repeat;
-      background-position: center;
+    @media (min-width: @tablet-width) {
+      padding-left: 0;
+      padding-top: 151px;
+      padding-bottom: 57px;
+
+      &--organic::after,
+      &--simple::after,
+      &--easy::after,
+      &--quick::after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        font-family: "Oswald", sans-serif;
+        font-weight: 400;
+        font-size: 280px;
+        line-height: 280px;
+        color: @lightgray;
+      }
+
+      &--organic::after {
+        content: "1";
+      }
+
+      &--simple::after {
+        content: "2";
+      }
+
+      &--easy::after {
+        content: "3";
+      }
+
+      &--quick::after {
+        content: "4";
+      }
     }
 
-    &--simple::before {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 60px;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: @basic;
-      background-image: url("../../img/features/simple.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &--easy::before {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 60px;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: @basic;
-      background-image: url("../../img/features/easy.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
+    &--organic::before,
+    &--simple::before,
+    &--easy::before,
     &--quick::before {
       content: "";
       display: block;
@@ -76,9 +83,30 @@
       top: 50%;
       transform: translateY(-50%);
       background-color: @basic;
-      background-image: url("../../img/features/quick.svg");
       background-repeat: no-repeat;
       background-position: center;
+
+      @media (min-width: @tablet-width) {
+        width: 80px;
+        height: 80px;
+        top: 80px;
+      }
+    }
+
+    &--organic::before {
+      background-image: url("../../img/features/organic.svg");
+    }
+
+    &--simple::before {
+      background-image: url("../../img/features/simple.svg");
+    }
+
+    &--easy::before {
+      background-image: url("../../img/features/easy.svg");
+    }
+
+    &--quick::before {
+      background-image: url("../../img/features/quick.svg");
     }
   }
 
@@ -86,11 +114,19 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
+    display: grid;
+    gap: 20px;
 
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 20px;
+    @media (min-width: @tablet-width) {
+      grid-template-columns: 230px 230px;
+      column-gap: 153px;
+      row-gap: 37px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-template-columns: 230px 230px 230px 230px;
+      column-gap: 0;
+      justify-content: space-between;
     }
   }
 }

@@ -13,6 +13,25 @@
     // outline: 3px solid rgb(219, 113, 43);
     // outline-offset: -3px;
     margin-right: 40px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: none;
+      width: 101px;
+      height: 18px;
+      background-image: url("../../img/logo-mobile-2.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 90px;
+
+      @media (max-width: @mobile-width-only) {
+        display: block;
+      }
+    }
 
     img {
       height: 65px;
