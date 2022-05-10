@@ -1,19 +1,26 @@
 .stats {
   display: grid;
+  grid-template-columns: 124px 124px;
   justify-content: space-between;
   row-gap: 20px;
-  width: 280px;
   margin: 0;
   margin-bottom: 40px;
 
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 124px 124px 1fr;
+    column-gap: 42px;
+  }
+
   &__item {
     box-sizing: border-box;
-    width: 124px;
     border: 1px solid @specialgray;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    padding-top: 14px;
+    padding-bottom: 17px;
   }
 
   &__number {
@@ -22,16 +29,27 @@
     font-size: 24px;
     line-height: 24px;
     color: @black;
+    text-transform: uppercase;
   }
 
   &__description {
     font-family: "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 12px;
     color: @darkgray;
     margin: 0;
     text-align: center;
     text-transform: lowercase;
+    position: absolute;
+    background-color: @lightgray-2;
+    top: 100%;
+    transform: translateY(-50%);
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: @tablet-width) {
+      background-color: @white;
+    }
   }
 }
 
@@ -42,8 +60,17 @@
   justify-content: center;
   border: none;
 
+  @media (min-width: @tablet-width) {
+    grid-column: auto;
+    // flex-direction: column;
+
+  }
+
   .stats__description {
     margin-right: 3px;
+    position: static;
+    transform: translateY(0);
+    padding: 0;
   }
 
   .stats__number,
