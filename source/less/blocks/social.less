@@ -4,11 +4,13 @@
   border-top: 1px solid @specialgray-2;
   border-bottom: 1px solid @specialgray-2;
 
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
   &__list {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     list-style-type: none;
     margin: 0;
     padding: 5px;
