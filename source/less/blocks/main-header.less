@@ -8,6 +8,20 @@
   // outline: 3px solid rgb(78, 219, 43);
   // outline-offset: -3px;
 
+  @media (min-width: @tablet-width) {
+    padding-left: @padding-tablet;
+    padding-right: @padding-tablet;
+    width: 708px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: @padding-desktop;
+    padding-right: @padding-desktop;
+    width: 1220px;
+  }
+
   &__logo {
     height: 65px;
     // outline: 3px solid rgb(219, 113, 43);

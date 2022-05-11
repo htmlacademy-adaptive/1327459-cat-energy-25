@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/outlines.css" rel="stylesheet">
+    <!-- <link href="css/outlines.css" rel="stylesheet"> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Подбор программы питания</title>
@@ -15,19 +15,20 @@
         <img src="img/logo-mobile.svg" width="33" height="38" alt="Логотип магазина «Кэт энерджи»">
       </a>
       <!-- Навигация -->
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
+          <span class="main-nav__toggle-burger"></span>
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item main-nav__item--current">
-            <a href="form.html">Подбор программы</a>
+            <a class="main-nav__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -138,10 +139,10 @@
       </section>
       <!-- Секция "Местоположение" -->
       <section class="geoposition">
-        <h2 class="visually-hidden">Наше местоположение</h2>
-        <img class="geoposition__map" src="" width="320" height="362" alt="Карта с указанием местоположения компании">
-        <div class="geoposition__pointer">
-          <img src="" width="57" height="53" alt="Логотип магазина «Кэт энерджи»">
+        <div class="geoposition__wrapper">
+          <h2 class="visually-hidden">Наше местоположение</h2>
+          <img class="geoposition__map" src="img/geoposition-mobile.jpg" width="320" height="362" alt="Карта с указанием местоположения компании">
+          <img class="geoposition__pointer" src="img/geoposition-pointer.png" width="57" height="53" alt="Логотип магазина «Кэт энерджи»">
         </div>
       </section>
     </main>

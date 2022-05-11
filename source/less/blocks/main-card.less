@@ -11,8 +11,10 @@
 
   &__background {
     min-height: 302px;
+    width: 100%;
     padding-left: @padding-mobile;
     padding-right: @padding-mobile;
+    padding-top: 27px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,6 +22,21 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 375px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 62px;
+      align-items: flex-start;
+      background-image: none;
+      padding-left: @padding-tablet;
+      padding-right: @padding-tablet;
+      order: 1;
+      min-height: auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: @padding-desktop;
+      padding-right: @padding-desktop;
+    }
   }
 
   &__title {
@@ -28,8 +45,16 @@
     line-height: 36px;
     margin: 0;
     margin-bottom: 25px;
-    margin-top: 27px;
     text-align: center;
+
+    @media (min-width: @tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      color: @black;
+      text-align: left;
+      margin-bottom: 41px;
+      margin-left: 87px;
+    }
   }
 
   &__text {
@@ -37,12 +62,25 @@
     margin-bottom: 25px;
     text-transform: uppercase;
     text-align: center;
-    width: 280px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+      color: @black;
+      text-align: left;
+      margin-bottom: 49px;
+      margin-left: 87px;
+    }
   }
 
   &__image {
     color: @black;
     margin-top: -135px;
+
+    @media (min-width: @tablet-width) {
+      order: 3;
+      margin: 0;
+    }
   }
 
   &__button {
@@ -52,6 +90,9 @@
       width: 244px;
       font-size: 20px;
       line-height: 20px;
+      order: 2;
+      align-self: flex-start;
+      margin-left: 87px;
     }
   }
 }
