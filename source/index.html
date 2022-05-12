@@ -11,8 +11,12 @@
     <!-- Хедер -->
     <header class="main-header">
       <!-- Логотип -->
-      <a class="main-header__logo logo" href="index.html">
-        <img src="img/logo-mobile.svg" width="33" height="38" alt="Логотип магазина «Кэт энерджи»">
+      <a class="main-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" width="33" height="38" alt="Логотип магазина «Кэт энерджи»">
+        </picture>
       </a>
       <!-- Навигация -->
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -42,7 +46,13 @@
           <h2 class="main-card__title">Функциональное питание для котов</h2>
           <p class="main-card__text">Занялся собой? Займись котом!</p>
         </div>
-        <img class="main-card__image" src="img/main-card-product.png" width="280" height="270" alt="Питание для котов «Кэт энерджи Pro»">
+        <div class="main-card__image">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/main-card-product-desktop.png 1x, img/main-card-product-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/main-card-product-tablet.jpg 1x, img/main-card-product-tablet@2x.jpg 2x">
+            <img src="img/main-card-product-mobile.png" srcset="img/main-card-product-mobile@2x.png 2x" alt="Питание для котов «Кэт энерджи Pro»">
+          </picture>
+        </div>
         <a class="main-card__button button" href="form.html">Подобрать программу</a>
       </section>
       <!-- Секция "Программы питания" -->

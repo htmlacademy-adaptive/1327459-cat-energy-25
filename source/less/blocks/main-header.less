@@ -11,6 +11,7 @@
   @media (min-width: @tablet-width) {
     padding-left: @padding-tablet;
     padding-right: @padding-tablet;
+    padding-top: 25px;
     width: 708px;
     flex-direction: row;
     justify-content: space-between;
@@ -29,6 +30,18 @@
     margin-right: 40px;
     position: relative;
 
+    @media (min-width: @tablet-width) {
+      height: 52px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 59px;
+    }
+
+    img {
+      height: 100%;
+    }
+
     &::after {
       content: "";
       display: none;
@@ -45,10 +58,6 @@
       @media (max-width: @mobile-width-only) {
         display: block;
       }
-    }
-
-    img {
-      height: 65px;
     }
   }
 }
