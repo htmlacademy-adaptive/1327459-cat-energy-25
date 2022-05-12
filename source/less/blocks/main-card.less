@@ -74,12 +74,20 @@
   }
 
   &__image {
+    height: 270px;
     color: @black;
     margin-top: -135px;
 
     @media (min-width: @tablet-width) {
+      height: 609px;
       order: 3;
       margin: 0;
+      z-index: -1;
+      margin-top: -80px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 499px;
     }
   }
 
