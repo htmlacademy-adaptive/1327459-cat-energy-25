@@ -112,7 +112,12 @@
           </div>
         </div>
         <div class="live-example__wrapper-bottom">
-          <img class="live-example__image" src="img/live-example-mobile.png" width="280" height="232" alt="Изображение кота">
+          <div class="live-example__image">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/live-example-tablet.png 1x, img/live-example-tablet@2x.png 2x">
+              <img src="img/live-example-mobile.png" srcset="img/live-example-mobile@2x.png 2x" alt="Изображение кота">
+            </picture>
+          </div>
           <div class="live-example__range range">
             <span class="range__before">Было</span>
             <div class="range__scale">
@@ -141,7 +146,7 @@
     <!-- Футер -->
     <footer class="main-footer">
       <!-- Логотип магазина -->
-      <a class="main-footer__logo logo" href="index.html">
+      <a class="main-footer__logo" href="index.html">
         <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип магазина «Кэт энерджи»">
       </a>
       <!-- Социальные сети -->
