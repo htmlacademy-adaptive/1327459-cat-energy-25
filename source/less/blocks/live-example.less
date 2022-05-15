@@ -6,6 +6,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  // outline: 2px solid red;
+  // outline-offset: -2px;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    align-items: stretch;
+    padding-top: 180px;
+    width: @desktop-width;
+    align-self: center;
+  }
 
   &__wrapper-top {
     background-color: @lightgray-2;
@@ -15,6 +25,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    // outline: 1px dashed black;
+    // outline-offset: -1px;
 
 
     @media (min-width: @tablet-width) {
@@ -23,6 +35,14 @@
       padding-left: @padding-tablet;
       padding-right: @padding-tablet;
       padding-bottom: 250px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: @lightgray;
+      padding-bottom: 20px;
+      padding-left: 110px;
+      padding-right: 160px;
+      width: 50%;
     }
   }
 
@@ -34,10 +54,19 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    // outline: 1px dashed black;
+    // outline-offset: -1px;
 
     @media (min-width: @tablet-width) {
       padding-left: @padding-tablet;
       padding-right: @padding-tablet;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 50%;
+      background-color: @lightgray;
+      padding-right: 110px;
+      padding-bottom: 65px;
     }
   }
 
@@ -54,6 +83,11 @@
       font-size: 60px;
       line-height: 60px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-top: -136px;
+      margin-bottom: 146px;
+    }
   }
 
   &__text {
@@ -63,6 +97,10 @@
     @media (min-width: @tablet-width) {
       font-size: 16px;
       line-height: 24px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 69px;
     }
   }
 

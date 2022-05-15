@@ -11,6 +11,12 @@
     column-gap: 42px;
   }
 
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 162px 162px;
+    row-gap: 55px;
+    justify-content: flex-start;
+  }
+
   &__item {
     box-sizing: border-box;
     border: 1px solid @specialgray;
@@ -61,10 +67,11 @@
       padding-right: 8px;
       font-size: 14px;
       line-height: 14px;
+      width: auto;
+    }
 
-      br {
-        display: none;
-      }
+    @media (min-width: @desktop-width) {
+      background-color: @lightgray;
     }
   }
 }
@@ -84,6 +91,12 @@
     padding: 0;
   }
 
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 3;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
   .stats__description {
     margin-right: 3px;
     position: static;
@@ -93,6 +106,11 @@
 
     @media (min-width: @tablet-width) {
       margin-bottom: 9px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
+      margin-right: 63px;
     }
   }
 
