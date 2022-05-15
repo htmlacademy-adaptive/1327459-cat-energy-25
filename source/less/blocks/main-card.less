@@ -9,6 +9,10 @@
   align-items: center;
   padding-bottom: 20px;
 
+  @media (min-width: @desktop-width) {
+    padding-bottom: 100px;
+  }
+
   &__wrapper {
     box-sizing: border-box;
     height: 302px;
@@ -23,8 +27,8 @@
     background-repeat: no-repeat;
     background-size: auto 302px;
     background-position: center;
-    outline: 2px solid red;
-    outline-offset: -2px;
+    // outline: 2px solid red;
+    // outline-offset: -2px;
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(to left, fade(@basic, 85%), fade(@basic, 85%)), url("../../img/main-card-background-mobile@2x.jpg");
@@ -52,6 +56,7 @@
       width: @desktop-width;
       top: 0;
       z-index: -1;
+      padding-top: 223px;
 
       @media (min-resolution: 2dppx) {
         background-image: linear-gradient(to left, fade(@basic, 85%), fade(@basic, 85%)), url("../../img/main-card-background-desktop@2x.jpg");
@@ -116,6 +121,9 @@
 
     @media (min-width: @desktop-width) {
       height: 499px;
+      margin: 0;
+      position: relative;
+      right: -110px;
     }
   }
 
@@ -133,6 +141,8 @@
 
     @media (min-width: @desktop-width) {
       margin-left: 80px;
+      position: relative;
+      top: 380px;
     }
   }
 }
