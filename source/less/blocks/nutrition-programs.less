@@ -147,6 +147,14 @@
     position: relative;
     padding-right: 57px;
 
+    &:hover::after {
+      background-image: url("../../img/icon-arrow-hover.svg");
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     @media (min-width: @tablet-width) {
       font-size: 20px;
       line-height: 30px;
@@ -163,7 +171,7 @@
       transform: translateY(-50%);
       background-image: url("../../img/icon-arrow.svg");
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: left center;
     }
   }
 }

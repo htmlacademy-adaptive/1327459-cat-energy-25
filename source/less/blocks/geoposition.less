@@ -1,9 +1,13 @@
 .geoposition {
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+  align-self: center;
+  position: relative;
+
+  &__map {
+    height: 362px;
+
+    @media (min-width: @tablet-width) {
+      height: 400px;
+    }
   }
 
   &__pointer {
