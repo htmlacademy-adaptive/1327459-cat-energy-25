@@ -1,5 +1,5 @@
 .button {
-  background-color: @basic;
+  background-color: @basic-color;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -14,7 +14,7 @@
   box-sizing: border-box;
 
   &:hover {
-    background-color: darken(saturate(spin(@basic, -0.2497), 3.5440), 4.3137);
+    background-color: darken(saturate(spin(@basic-color, -0.2497), 3.5440), 4.3137);
   }
 
   &:active {
@@ -24,5 +24,13 @@
   &--secondary {
     background-color: @lightgray;
     color: @darkgray;
+
+    &:hover {
+      background-color: darken(@lightgray, 2.7451);
+    }
+
+    &:active {
+      color: rgba(@darkgray, 0.3);
+    }
   }
 }
