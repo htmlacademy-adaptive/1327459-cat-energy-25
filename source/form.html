@@ -138,15 +138,26 @@
       </form>
       <!-- Секция "Дилеры" -->
       <section class="invite-card">
-        <h2 class="invite-card__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="invite-card__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="invite-card__wrapper">
+          <h2 class="invite-card__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <address class="invite-card__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
       </section>
       <!-- Секция "Местоположение" -->
       <section class="geoposition">
-        <div class="geoposition__wrapper">
-          <h2 class="visually-hidden">Наше местоположение</h2>
-          <img class="geoposition__map" src="img/geoposition-mobile.jpg" width="320" height="362" alt="Карта с указанием местоположения компании">
-          <img class="geoposition__pointer" src="img/geoposition-pointer.png" width="57" height="53" alt="Логотип магазина «Кэт энерджи»">
+        <h2 class="visually-hidden">Наше местоположение</h2>
+        <div class="geoposition__map">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="/img/geoposition-desktop.jpg 1x, img/geoposition-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/geoposition-tablet.jpg 1x, img/geoposition-tablet@2x.jpg 2x">
+            <img src="img/geoposition-mobile.jpg" srcset="img/geoposition-mobile@2x.jpg 2x" alt="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          </picture>
+        </div>
+        <div class="geoposition__pointer">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/geoposition-pointer-tablet.png 1x, img/geoposition-pointer-tablet@2x.png 2x">
+            <img src="img/geoposition-pointer-mobile.png" srcset="img/geoposition-pointer-mobile@2x.png 2x" alt="Логотип магазина «Кэт энерджи»">
+          </picture>
         </div>
       </section>
     </main>
