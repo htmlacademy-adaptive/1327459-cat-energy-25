@@ -1,4 +1,7 @@
 .show-more-card {
+  display: grid;
+  justify-items: center;
+
   &__title {
     font-family: "Oswald", sans-serif;
     font-size: 16px;
@@ -6,6 +9,31 @@
     line-height: 20px;
     color: @specialdarkgray;
     text-transform: uppercase;
+  }
+
+  &__button {
+    order: -1;
+    border: none;
+    background-color: red;
+    width: 30px;
+    height: 2px;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: red;
+      left: 0;
+      top: 0;
+      transform: rotateZ(90deg);
+    }
+  }
+
+  &__show-all-button {
+    width: 100%;
   }
 
   &__text {
