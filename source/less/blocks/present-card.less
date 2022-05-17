@@ -4,4 +4,29 @@
   line-height: 20px;
   color: @white;
   background-color: fade(@basic-color, 85%);
+  background-image: linear-gradient(to left, fade(@basic-color, 85%), fade(@basic-color, 85%)), url("../../img/present-card-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 290px;
+  background-position: center;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  justify-content: center;
+  margin-bottom: 35px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to left, fade(@basic-color, 85%), fade(@basic-color, 85%)), url("../../img/present-card-mobile@2x.jpg");
+  }
+
+  &__text {
+    text-align: center;
+    margin: 0;
+  }
+
+  &__icon {
+    margin-bottom: 48px;
+  }
 }
