@@ -49,86 +49,105 @@
           <legend class="visually-hidden">Основные данные</legend>
           <ul class="nutrition-form__list">
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">Имя:*
-                <input class="nutrition-form__input" type="text" name="cat-name" value="Барсик" required>
+              <label class="nutrition-form__label">
+                <span>Имя:*</span>
+                <input class="nutrition-form__input" type="text" name="cat-name" placeholder="Барсик" required>
               </label>
             </li>
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">Вес (кг):*
-                <input class="nutrition-form__input" type="text" name="cat-weight" value="7" required>
+              <label class="nutrition-form__label">
+                <span>Вес (кг):*</span>
+                <input class="nutrition-form__input" type="text" name="cat-weight" placeholder="7" required>
               </label>
             </li>
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">Возраст (лет):
-                <input class="nutrition-form__input" type="text" name="cat-age" value="7">
+              <label class="nutrition-form__label">
+                <span>Возраст (лет):</span>
+                <input class="nutrition-form__input" type="text" name="cat-age" placeholder="7">
               </label>
             </li>
           </ul>
         </fieldset>
         <!-- Цель программы -->
-        <fieldset class="nutrition-form__group">
+        <fieldset class="nutrition-form__group nutrition-form__group--type-of-program">
           <legend class="visually-hidden">Цель программы</legend>
           <ul class="nutrition-form__list">
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">Похудение
-                <input class="nutrition-form__radio-button" type="radio" name="target" value="weight-loss" checked>
+              <label class="nutrition-form__label control">
+                <input class="control__input visually-hidden" type="radio" name="target" value="weight-loss" checked>
+                <span class="control__mark"></span>
+                <span class="control__label">Похудение</span>
               </label>
             </li>
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">Набор массы
-                <input class="nutrition-form__radio-button" type="radio" name="target" value="weight-gain">
+              <label class="nutrition-form__label control">
+                <input class="control__input visually-hidden" type="radio" name="target" value="weight-gain">
+                <span class="control__mark"></span>
+                <span class="control__label">Набор массы</span>
               </label>
             </li>
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">Не знаю (нужен ваш совет)
-                <input class="nutrition-form__radio-button" type="radio" name="target" value="need-advice">
+              <label class="nutrition-form__label control">
+                <input class="control__input visually-hidden" type="radio" name="target" value="need-advice">
+                <span class="control__mark"></span>
+                <span class="control__label">Не знаю (нужен ваш совет)</span>
               </label>
             </li>
           </ul>
         </fieldset>
         <!-- Контактные данные владельца -->
         <fieldset class="nutrition-form__group">
-          <legend class="nutrition-form__legend">Контактные данные (владельца кота)</legend>
+          <legend class="nutrition-form__legend"><span>Контактные данные<br> (владельца кота)</span></legend>
           <ul class="nutrition-form__list">
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">E-mail:*
-                <input class="nutrition-form__input nutrition-form__input--email" type="email" name="email" value="kuklachev@gmail.com" required>
+              <label class="nutrition-form__label">
+                <span>E-mail:*</span>
+                <input class="nutrition-form__input nutrition-form__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
               </label>
             </li>
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">Телефон:*
-                <input class="nutrition-form__input nutrition-form__input--phone" type="tel" name="phone-number" value="8 (960) 900-60-90" required>
+              <label class="nutrition-form__label">
+                <span>Телефон:*</span>
+                <input class="nutrition-form__input nutrition-form__input--phone" type="tel" name="phone-number" placeholder="8 (960) 900-60-90" required>
               </label>
             </li>
           </ul>
         </fieldset>
         <!-- Комментарий -->
         <fieldset class="nutrition-form__group">
-          <legend class="nutrition-form__legend">Комментарий</legend>
+          <legend class="nutrition-form__legend"><span>Комментарий</span></legend>
           <textarea class="nutrition-form__input nutrition-form__input--comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <!-- Дополнительно -->
         <fieldset class="nutrition-form__group">
-          <legend class="nutrition-form__legend">Дополнительно</legend>
+          <legend class="nutrition-form__legend"><span>Дополнительно<span></span></legend>
           <ul class="nutrition-form__list">
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">Сахарозаменитель
-                <input class="nutrition-form__input" type="checkbox" name="sweetener" checked>
+              <label class="nutrition-form__label control">
+                <input class="control__input visually-hidden" type="checkbox" name="sweetener" checked>
+                <span class="control__mark"></span>
+                <span class="control__label">Сахарозаменитель</span>
               </label>
             </li>
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">Питьевая вода
-                <input class="nutrition-form__input" type="checkbox" name="drinking-water">
+              <label class="nutrition-form__label control">
+                <input class="control__input visually-hidden" type="checkbox" name="drinking-water">
+                <span class="control__mark"></span>
+                <span class="control__label">Питьевая вода</span>
               </label>
             </li>
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">Молоко
-                <input class="nutrition-form__input" type="checkbox" name="milk">
+              <label class="nutrition-form__label control">
+                <input class="control__input visually-hidden" type="checkbox" name="milk">
+                <span class="control__mark"></span>
+                <span class="control__label">Молоко</span>
               </label>
             </li>
             <li class="nutrition-form__item">
-              <label class="nutrition-form__label">Витамины
-                <input class="nutrition-form__input" type="checkbox" name="vitamins">
+              <label class="nutrition-form__label control">
+                <input class="control__input visually-hidden" type="checkbox" name="vitamins">
+                <span class="control__mark"></span>
+                <span class="control__label">Витамины</span>
               </label>
             </li>
           </ul>

@@ -1,6 +1,8 @@
 .add-product {
   padding-top: 25px;
   padding-bottom: 35px;
+  outline: 1px dashed rgb(255, 0, 0);
+  outline-offset: -1px;
 
   &__title {
     font-family: "Oswald", sans-serif;
@@ -39,16 +41,24 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    // outline: 1px dashed blue;
+    // outline-offset: -2px;
   }
 
   &__item {
     padding-top: 13px;
     padding-bottom: 18px;
     border-bottom: 1px solid @specialgray;
+    // outline: 2px solid rgba(rgb(41, 5, 245), 0.5);
+    // outline-offset: -3px;
 
     &:first-child {
       border-top: 1px solid @specialgray;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 26px 38px 28px 38px;
     }
   }
 }
