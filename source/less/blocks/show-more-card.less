@@ -9,23 +9,28 @@
     line-height: 20px;
     color: @specialdarkgray;
     text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 8px;
+    position: relative;
   }
 
   &__button {
     order: -1;
     border: none;
-    background-color: red;
+    background-color: @specialgray-5;
     width: 30px;
     height: 2px;
     position: relative;
     cursor: pointer;
+    margin-bottom: 38px;
+    margin-top: 20px;
 
     &::before {
       content: "";
       position: absolute;
       width: 30px;
       height: 2px;
-      background-color: red;
+      background-color: @specialgray-5;
       left: 0;
       top: 0;
       transform: rotateZ(90deg);
@@ -41,5 +46,7 @@
     font-size: 12px;
     line-height: 16px;
     color: @darkgray;
+    margin: 0;
+    margin-bottom: 21px;
   }
 }

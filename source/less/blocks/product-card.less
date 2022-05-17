@@ -1,4 +1,5 @@
 .product-card {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -93,6 +94,26 @@
     @media (min-width: @tablet-width) {
       grid-column: auto;
       grid-row: auto;
+    }
+  }
+
+  &--additional {
+    grid-template-columns: auto;
+
+    .product-card__title,
+    .product-card__specs,
+    .product-card__button {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    .product-card__title {
+      padding: 0;
+      margin-bottom: 13px;
+    }
+
+    .product-card__button {
+      margin-top: 15px;
     }
   }
 }
