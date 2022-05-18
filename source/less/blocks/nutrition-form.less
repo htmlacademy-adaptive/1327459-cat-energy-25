@@ -81,6 +81,21 @@
     }
   }
 
+  // Для позиционирования иконок
+  &__input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-left: 12px;
+  }
+
+  &__input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+  }
+  //
+
   &__input {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
@@ -111,16 +126,28 @@
 
     &--email {
       padding-right: 37px;
-      background-image: url("../../img/email-icon.svg");
-      background-repeat: no-repeat;
-      background-position: calc(100% - 15px) center;
+      margin: 0;
+    }
+
+    &--email:focus + .nutrition-form__input-icon * {
+      stroke: @basic-color;
+    }
+
+    &--email:not(:placeholder-shown):invalid + .nutrition-form__input-icon * {
+      stroke: @error-color;
     }
 
     &--phone {
       padding-right: 37px;
-      background-image: url("../../img/phone-icon.svg");
-      background-repeat: no-repeat;
-      background-position: calc(100% - 15px) center;
+      margin: 0;
+    }
+
+    &--phone:focus + .nutrition-form__input-icon * {
+      fill: @basic-color;
+    }
+
+    &--phone:not(:placeholder-shown):invalid + .nutrition-form__input-icon * {
+      fill: @error-color;
     }
 
     &--comment {
