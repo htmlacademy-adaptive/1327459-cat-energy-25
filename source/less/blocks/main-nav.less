@@ -117,6 +117,12 @@
 
     &--current {
       position: relative;
+
+      @media (min-width: @tablet-width) {
+        .main-nav__link:hover {
+          opacity: 1;
+        }
+      }
     }
 
     &--current::before {
@@ -161,6 +167,14 @@
 
     @media (min-width: @tablet-width) {
       padding: 8px 0;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
   }
 

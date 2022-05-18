@@ -49,6 +49,7 @@
       border: 1px solid @specialgray;
       transform: translateY(-50%) translateX(50%);
       background-color: @white;
+      filter: drop-shadow(0 1px 3px rgba(@black, 0.16));
 
       &::before {
         content: "";
@@ -60,6 +61,15 @@
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
+      }
+
+      &:hover {
+        filter: drop-shadow(0 2px 4px rgba(@black, 0.19));
+      }
+
+      &:active {
+        filter: drop-shadow(0 3px 5px rgba(@black, 0.2));
+        border-color: @basic-color;
       }
     }
   }
