@@ -1,13 +1,29 @@
 .nutrition-form {
   display: flex;
   flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @darkgray;
+  text-transform: uppercase;
+  // outline: 1px dashed blue;
+  // outline-offset: -1px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
   &__group {
     border: none;
     padding: 0;
-    // outline: 1px solid red;
-    // outline-offset: -1px;
     margin: 0;
+    padding-bottom: 23px;
+    // outline: 1px solid red;
+    // outline-offset: -2px;
 
     &--type-of-program {
       width: 100%;
@@ -19,11 +35,27 @@
       border-top: 1px solid @specialgray-2;
       border-bottom: 1px solid @specialgray-2;
     }
+
+    &--extra {
+      .nutrition-form__list {
+        @media (min-width: @tablet-width) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 20px;
+          row-gap: 25px;
+        }
+      }
+
+      .nutrition-form__item {
+        @media (min-width: @tablet-width) {
+          margin: 0;
+        }
+      }
+    }
   }
 
   &__legend {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
+    text-transform: none;
     font-size: 24px;
     line-height: 26px;
     color: @black;
@@ -32,6 +64,11 @@
     overflow: hidden;
     padding: 0;
     margin-bottom: 35px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+    }
 
     span {
       display: inline-block;
@@ -56,10 +93,16 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    // outline: 1px solid black;
+    // outline-offset: -1px;
   }
 
   &__item {
     margin-bottom: 14px;
+    // outline: 1px solid red;
+    // outline-offset: -2px;
 
     &:last-child {
       margin-bottom: 0;
@@ -67,12 +110,6 @@
   }
 
   &__label {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    color: @darkgray;
-    text-transform: uppercase;
     display: flex;
     align-items: center;
 
@@ -97,15 +134,11 @@
   //
 
   &__input {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    color: @darkgray;
-    text-transform: uppercase;
+    font: inherit;
+    text-transform: inherit;
+    color: inherit;
     box-sizing: border-box;
     border: 1px solid @specialgray-6;
-    // border: 1px solid gray;
     padding: 13px 15px;
     margin-left: 12px;
     width: 100%;
@@ -151,12 +184,10 @@
     }
 
     &--comment {
-      font-size: 16px;
-      line-height: 18px;
-    }
-
-    &--comment::placeholder {
-      color: @darkgray;
+      margin: 0;
+      resize: none;
+      height: 151px;
+      padding: 9px 10px 9px 15px;
     }
   }
 
@@ -170,5 +201,11 @@
     font-size: 14px;
     line-height: 16px;
     color: @black;
+    text-align: center;
+    text-transform: none;
+
+    @media (min-width: @tablet-width) {
+      font-size: 16px;
+    }
   }
 }
