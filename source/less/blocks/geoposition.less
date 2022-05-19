@@ -1,6 +1,15 @@
 .geoposition {
   align-self: center;
   position: relative;
+  width: calc(100% + 2 * @padding-mobile);
+
+  @media (min-width: @tablet-width) {
+    width: calc(100% + 2 * @padding-tablet);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: calc(100% + 2 * @padding-desktop);
+  }
 
   &__map {
     height: 362px;
