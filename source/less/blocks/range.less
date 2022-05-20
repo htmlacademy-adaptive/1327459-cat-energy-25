@@ -17,6 +17,7 @@
     border-radius: 6px;
     margin-left: 13px;
     margin-right: 13px;
+    background-color: @white;
 
     @media (min-width: @tablet-width) {
       width: 426px;
@@ -76,10 +77,24 @@
 
   &__before,
   &__after {
+    font: inherit;
+    text-transform: inherit;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
     @media (min-width: @tablet-width) {
       font-size: 20px;
       line-height: 30px;
       border-bottom: 1px dashed @specialgray;
+
+      &:hover {
+        border-bottom: 1px solid rgba(@black, 0.4);
+      }
+
+      &:active {
+        border: none;
+      }
     }
   }
 }
