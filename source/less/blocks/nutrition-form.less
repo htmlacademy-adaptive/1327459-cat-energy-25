@@ -7,8 +7,10 @@
   line-height: 18px;
   color: @darkgray;
   text-transform: uppercase;
-  outline: 1px dashed blue;
-  outline-offset: -1px;
+  // outline: 1px dashed blue;
+  // outline-offset: -1px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -21,9 +23,9 @@
     border: none;
     padding: 0;
     margin: 0;
-    padding-bottom: 23px;
-    outline: 1px solid red;
-    outline-offset: -2px;
+    // outline: 1px solid red;
+    // outline-offset: -2px;
+    margin-bottom: 24px;
   }
 
   &__legend {
@@ -32,7 +34,13 @@
     line-height: 26px;
     color: @black;
     padding: 0;
+    margin: 0;
     margin-bottom: 35px;
+    width: calc(100% + 2 * @padding-mobile);
+    padding-left: @padding-mobile;
+    padding-right: @padding-mobile;
+    box-sizing: border-box;
+    margin-left: -@padding-mobile;
 
     @media (min-width: @tablet-width) {
       font-size: 36px;
@@ -44,16 +52,14 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    outline: 1px solid black;
-    outline-offset: -1px;
+    // outline: 1px solid black;
+    // outline-offset: -1px;
   }
 
   &__item {
     margin-bottom: 14px;
-    outline: 1px solid red;
-    outline-offset: -2px;
+    // outline: 1px solid red;
+    // outline-offset: -2px;
 
     &:last-child {
       margin-bottom: 0;
@@ -63,10 +69,10 @@
   &__label {
     display: flex;
     align-items: center;
+  }
 
-    span {
-      white-space: nowrap;
-    }
+  &__name {
+    white-space: nowrap;
   }
 
   // Для позиционирования иконок
@@ -145,6 +151,7 @@
   &__button {
     border: none;
     cursor: pointer;
+    margin-bottom: 21px;
   }
 
   &__note {
@@ -154,6 +161,8 @@
     color: @black;
     text-align: center;
     text-transform: none;
+    margin: 0;
+    margin-bottom: 22px;
 
     @media (min-width: @tablet-width) {
       font-size: 16px;
@@ -162,6 +171,8 @@
 }
 
 .nutrition-form__group--extra {
+  color: @black;
+
   .nutrition-form__list {
     @media (min-width: @tablet-width) {
       display: grid;
@@ -172,6 +183,12 @@
   }
 
   .nutrition-form__item {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     @media (min-width: @tablet-width) {
       margin: 0;
     }
@@ -187,4 +204,13 @@
   padding-bottom: 25px;
   border-top: 1px solid @specialgray-2;
   border-bottom: 1px solid @specialgray-2;
+  color: @darkgray-2;
+
+  .nutrition-form__item {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
