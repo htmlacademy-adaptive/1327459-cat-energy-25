@@ -7,8 +7,8 @@
   line-height: 18px;
   color: @darkgray;
   text-transform: uppercase;
-  // outline: 1px dashed blue;
-  // outline-offset: -1px;
+  outline: 1px dashed blue;
+  outline-offset: -1px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -22,36 +22,8 @@
     padding: 0;
     margin: 0;
     padding-bottom: 23px;
-    // outline: 1px solid red;
-    // outline-offset: -2px;
-
-    &--type-of-program {
-      width: 100%;
-      align-self: center;
-      padding-left: @padding-mobile;
-      padding-right: @padding-mobile;
-      padding-top: 28px;
-      padding-bottom: 25px;
-      border-top: 1px solid @specialgray-2;
-      border-bottom: 1px solid @specialgray-2;
-    }
-
-    &--extra {
-      .nutrition-form__list {
-        @media (min-width: @tablet-width) {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          column-gap: 20px;
-          row-gap: 25px;
-        }
-      }
-
-      .nutrition-form__item {
-        @media (min-width: @tablet-width) {
-          margin: 0;
-        }
-      }
-    }
+    outline: 1px solid red;
+    outline-offset: -2px;
   }
 
   &__legend {
@@ -74,14 +46,14 @@
     padding: 0;
     padding-top: 10px;
     padding-bottom: 10px;
-    // outline: 1px solid black;
-    // outline-offset: -1px;
+    outline: 1px solid black;
+    outline-offset: -1px;
   }
 
   &__item {
     margin-bottom: 14px;
-    // outline: 1px solid red;
-    // outline-offset: -2px;
+    outline: 1px solid red;
+    outline-offset: -2px;
 
     &:last-child {
       margin-bottom: 0;
@@ -187,4 +159,32 @@
       font-size: 16px;
     }
   }
+}
+
+.nutrition-form__group--extra {
+  .nutrition-form__list {
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 25px;
+    }
+  }
+
+  .nutrition-form__item {
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
+  }
+}
+
+.nutrition-form__group--type-of-program {
+  width: 100%;
+  align-self: center;
+  padding-left: @padding-mobile;
+  padding-right: @padding-mobile;
+  padding-top: 28px;
+  padding-bottom: 25px;
+  border-top: 1px solid @specialgray-2;
+  border-bottom: 1px solid @specialgray-2;
 }
