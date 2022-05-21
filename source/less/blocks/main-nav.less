@@ -31,8 +31,15 @@
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
-    border-top: 1px solid @specialgray-3;
     width: 100%;
+
+    @media (max-width: @mobile-width-only) {
+      border-bottom: 1px solid @specialgray-3;
+
+      &:first-child {
+        border-top: 1px solid @specialgray-3;
+      }
+    }
 
     &--current {
       position: relative;
@@ -63,7 +70,6 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 24px;
-      border: none;
 
       &:not(:last-child) {
         margin-right: 34px;
