@@ -6,7 +6,8 @@
   &::after {
     content: "";
     border-bottom: 2px solid @basic-color;
-    width: 100%;
+    // width: 100%;
+    width: calc(100vw + 100%);
     height: 0.5em;
     position: absolute;
     top: 0;
@@ -17,11 +18,12 @@
     &::before {
       content: "";
       border-bottom: 2px solid @basic-color;
-      width: 100%;
+      // width: 100%;
+      width: calc(100vw + 100%);
       height: 0.5em;
       position: absolute;
       top: 0;
-      margin-left: calc(-100% - 22px);
+      margin-left: calc((-100vw - 100%) - 22px);
     }
   }
 }
