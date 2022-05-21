@@ -1,9 +1,11 @@
 .main-nav {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
   }
 
   &__list {
@@ -14,6 +16,11 @@
     flex-direction: column;
     align-items: center;
     background-color: @white;
+    // outline: 1px solid black;
+
+    @media (max-width: @mobile-width-only) {
+      width: calc(100% + 2 * @padding-mobile);
+    }
 
     @media (min-width: @tablet-width) {
       flex-direction: row;
@@ -165,34 +172,32 @@
   @media (max-width: @mobile-width-only) {
     .main-nav__list {
       position: absolute;
-      width: calc(100% + 2 * @padding-mobile);
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
       z-index: 1;
     }
-  }
 
-  .main-nav__toggle-burger {
-    background-color: transparent;
-  }
+    .main-nav__toggle-burger {
+      background-color: transparent;
+    }
 
-  .main-nav__toggle-burger::before {
-    transform: rotate(-45deg);
-    top: 0;
-  }
+    .main-nav__toggle-burger::before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
 
-  .main-nav__toggle-burger::after {
-    transform: rotate(45deg);
-    top: 0;
+    .main-nav__toggle-burger::after {
+      transform: rotate(45deg);
+      top: 0;
+    }
   }
 }
 
 // Стили на случай, если скрипт не загрузится
 .main-nav--nojs {
-  .main-nav__list {
-    display: block;
-    position: static;
+  @media (max-width: @mobile-width-only) {
+    .main-nav__list {
+      display: block;
+      position: static;
+    }
   }
 
   .main-nav__toggle {
