@@ -198,6 +198,16 @@
       display: block;
       position: static;
     }
+
+    .main-nav__item:last-child {
+      border-bottom: none;
+    }
+
+    .main-nav__list--home-page {
+      .main-nav__item:last-child {
+        border-bottom: 1px solid @specialgray-3;
+      }
+    }
   }
 
   .main-nav__toggle {
