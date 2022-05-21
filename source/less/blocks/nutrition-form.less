@@ -12,11 +12,13 @@
   padding-bottom: 10px;
   padding-top: 10px;
 
+  @form-padding: 40px; //Отступы формы в планшетном разрешении
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: @form-padding;
+    padding-right: @form-padding;
   }
 
   &__group {
@@ -41,10 +43,15 @@
     padding-right: @padding-mobile;
     box-sizing: border-box;
     margin-left: -@padding-mobile;
+    outline: 1px solid black;
 
     @media (min-width: @tablet-width) {
       font-size: 36px;
       line-height: 36px;
+      width: calc(100% + 2 * @padding-tablet + 2 * @form-padding);
+      padding-left: calc(@padding-tablet + @form-padding);
+      padding-right: calc(@padding-tablet + @form-padding);
+      margin-left: calc(-@padding-tablet - @form-padding);
     }
   }
 
