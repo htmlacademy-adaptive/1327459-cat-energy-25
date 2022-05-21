@@ -1,31 +1,42 @@
 .main-footer {
   background-color: @lightgray;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  padding-left: @padding-mobile;
-  padding-right: @padding-mobile;
-  width: 280px;
+  width: 320px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   // outline: 1px dashed black;
   // outline-offset: -1px;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
-    padding-left: @padding-tablet;
-    padding-right: @padding-tablet;
-    padding-top: 58px;
-    padding-bottom: 55px;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 768px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: @padding-desktop;
-    padding-right: @padding-desktop;
-    width: 1220px;
+    width: 100vw;
+  }
+
+  .main-footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: @padding-mobile;
+    padding-right: @padding-mobile;
+
+    @media (min-width: @tablet-width) {
+      padding-left: @padding-tablet;
+      padding-right: @padding-tablet;
+      padding-top: 58px;
+      padding-bottom: 55px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 auto;
+      padding-left: @padding-desktop;
+      padding-right: @padding-desktop;
+      width: 1220px;
+    }
   }
 
   &__logo {
