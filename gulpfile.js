@@ -37,6 +37,37 @@ const html = () => {
   .pipe(gulp.dest('build'));
 }
 
+// Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'))
+}
+
+// Images
+
+const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(squoosh())
+  .pipe(gulp.dest('build/img'))
+}
+
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(gulp.dest('build/img'))
+}
+
+//WebP
+
+export const createWebp = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(squoosh({
+    webp: {}
+  }))
+  .pipe(gulp.dest('build/img'))
+}
+
 // Server
 
 const server = (done) => {
