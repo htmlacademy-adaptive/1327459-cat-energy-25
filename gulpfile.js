@@ -13,7 +13,6 @@ import svgo from 'gulp-svgmin';//
 import svgstore from 'gulp-svgstore';//
 import del from 'del';//
 
-
 // Styles
 
 export const styles = () => {
@@ -91,7 +90,7 @@ export const sprite = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'source'
     },
     cors: true,
     notify: false,
