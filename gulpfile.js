@@ -30,7 +30,7 @@ export const styles = () => {
 
 // HTML
 
-const html = () => {
+export const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest('build'));
@@ -38,7 +38,7 @@ const html = () => {
 
 // Scripts
 
-const scripts = () => {
+export const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
   .pipe(gulp.dest('build/js'))
@@ -46,7 +46,7 @@ const scripts = () => {
 
 // Images
 
-const optimizeImages = () => {
+export const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
