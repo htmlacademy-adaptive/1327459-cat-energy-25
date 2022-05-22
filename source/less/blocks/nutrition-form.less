@@ -160,12 +160,12 @@
       margin: 0;
     }
 
-    &--email:focus + .nutrition-form__input-icon * {
-      stroke: @basic-color;
+    &--email:focus ~ .nutrition-form__input-icon {
+      color: @basic-color;
     }
 
-    &--email:not(:placeholder-shown):invalid + .nutrition-form__input-icon * {
-      stroke: @error-color;
+    &--email:not(:placeholder-shown):invalid ~ .nutrition-form__input-icon {
+      color: @error-color;
     }
 
     &--phone {
@@ -173,12 +173,12 @@
       margin: 0;
     }
 
-    &--phone:focus + .nutrition-form__input-icon * {
-      fill: @basic-color;
+    &--phone:focus ~ .nutrition-form__input-icon {
+      color: @basic-color;
     }
 
-    &--phone:not(:placeholder-shown):invalid + .nutrition-form__input-icon * {
-      fill: @error-color;
+    &--phone:not(:placeholder-shown):invalid ~ .nutrition-form__input-icon {
+      color: @error-color;
     }
 
     &--comment {
