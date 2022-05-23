@@ -6,15 +6,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // outline: 2px solid red;
-  // outline-offset: -2px;
 
   @content-shift: 179px; //Превышение контента на десктопе
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     align-items: stretch;
-
     align-self: center;
     width: 100vw;
     justify-content: center;
@@ -30,16 +27,14 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    // outline: 1px dashed black;
-    // outline-offset: -1px;
-
 
     @media (min-width: @tablet-width) {
       background-color: @white;
       border-top: 1px solid @specialgray-3;
       padding-left: @padding-tablet;
       padding-right: @padding-tablet;
-      padding-bottom: 250px;
+      padding-bottom: 234px;
+      padding-top: 43px;
     }
 
     @media (min-width: @desktop-width) {
@@ -60,12 +55,11 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    // outline: 1px dashed black;
-    // outline-offset: -1px;
 
     @media (min-width: @tablet-width) {
       padding-left: @padding-tablet;
       padding-right: @padding-tablet;
+      padding-bottom: 55px;
     }
 
     @media (min-width: @desktop-width) {
@@ -89,6 +83,7 @@
     @media (min-width: @tablet-width) {
       font-size: 60px;
       line-height: 60px;
+      margin-bottom: 64px;
     }
 
     @media (min-width: @desktop-width) {
@@ -103,6 +98,7 @@
     @media (min-width: @tablet-width) {
       font-size: 16px;
       line-height: 24px;
+      margin-bottom: 53px;
     }
 
     @media (min-width: @desktop-width) {
@@ -116,7 +112,8 @@
     height: 232px;
 
     @media (min-width: @tablet-width) {
-      margin-top: -180px;
+      margin-top: -170px;
+      margin-bottom: 24px;
       height: 511px;
     }
 

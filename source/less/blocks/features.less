@@ -10,6 +10,7 @@
     padding-top: 45px;
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 46px;
   }
 
   &__title {
@@ -24,7 +25,7 @@
     @media (min-width: @tablet-width) {
       font-size: 60px;
       line-height: 60px;
-      margin-bottom: 32px;
+      margin-bottom: 33px;
     }
   }
 
@@ -35,8 +36,24 @@
 
     @media (min-width: @tablet-width) {
       padding-left: 0;
-      padding-top: 151px;
-      padding-bottom: 57px;
+      padding-top: 152px;
+      min-width: 220px;
+
+      &--organic {
+        width: 225px;
+      }
+
+      &--simple {
+        width: 246px;
+      }
+
+      &--easy {
+        width: 247px;
+      }
+
+      &--quick {
+        width: 249px;
+      }
 
       &--organic::after,
       &--simple::after,
@@ -55,18 +72,22 @@
 
       &--organic::after {
         content: "1";
+        // right: 5px;
       }
 
       &--simple::after {
         content: "2";
+        // right: -14px;
       }
 
       &--easy::after {
         content: "3";
+        // right: -16px;
       }
 
       &--quick::after {
         content: "4";
+        // right: -18px;
       }
     }
 
@@ -118,15 +139,21 @@
     gap: 26px;
 
     @media (min-width: @tablet-width) {
-      grid-template-columns: 230px 230px;
-      column-gap: 153px;
+      grid-template-columns: 1fr 1fr;
       row-gap: 37px;
+      column-gap: 60px;
     }
 
     @media (min-width: @desktop-width) {
       grid-template-columns: 230px 230px 230px 230px;
       column-gap: 0;
       justify-content: space-between;
+    }
+  }
+
+  &__item {
+    @media (min-width: @tablet-width) {
+      min-height: 280px;
     }
   }
 }
