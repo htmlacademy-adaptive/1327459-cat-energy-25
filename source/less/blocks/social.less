@@ -14,17 +14,27 @@
     list-style-type: none;
     margin: 0;
     padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  &__item {
+    min-width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 24px;
   }
 
   &__link {
     display: block;
     color: @darkgray;
     text-decoration: none;
-    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   &__icon {
