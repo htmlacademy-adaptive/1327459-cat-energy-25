@@ -24,8 +24,8 @@
       justify-content: space-between;
       padding-left: 40px;
       padding-right: 40px;
-      padding-top: 47px;
-      padding-bottom: 47px;
+      padding-top: 60px;
+      padding-bottom: 61px;
     }
 
     @media (min-width: @desktop-width) {
@@ -50,7 +50,7 @@
     width: 50%;
 
     @media (min-width: @tablet-width) {
-      width: 150px;
+      width: 170px;
       font-size: 20px;
       line-height: 26px;
     }
@@ -64,10 +64,18 @@
     color: @darkgray;
     width: 50%;
 
+    br:nth-of-type(2) {
+      display: none;
+    }
+
     @media (min-width: @tablet-width) {
       width: 160px;
       text-align: right;
       font-size: 16px;
+
+      br:nth-of-type(2) {
+        display: inline;
+      }
     }
 
     @media (min-width: @desktop-width) {
