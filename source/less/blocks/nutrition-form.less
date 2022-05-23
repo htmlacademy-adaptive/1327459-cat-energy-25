@@ -10,7 +10,7 @@
   // outline: 1px dashed blue;
   // outline-offset: -1px;
   padding-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 21px;
 
   @form-padding: 40px; //Отступы формы в планшетном разрешении
 
@@ -137,8 +137,8 @@
     color: inherit;
     box-sizing: border-box;
     border: 1px solid @specialgray-6;
-    padding: 13px 15px;
-    margin-left: 12px;
+    padding: 13px 14px 12px 14px;
+    margin-left: 14px;
     width: 100%;
 
     &:hover {
@@ -184,8 +184,9 @@
     &--comment {
       margin: 0;
       resize: none;
-      height: 151px;
+      height: 150px;
       padding: 9px 10px 9px 15px;
+      margin-top: 3px;
 
       @media (min-width: @tablet-width) {
         height: 174px;
@@ -203,6 +204,7 @@
     margin-bottom: 21px;
     font-size: 16px;
     line-height: 16px;
+    margin-top: 13px;
 
     @media (min-width: @tablet-width) {
       justify-self: flex-start;
@@ -327,6 +329,8 @@
   color: @black;
 
   .nutrition-form__list {
+    padding: 2px 0;
+
     @media (min-width: @tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
