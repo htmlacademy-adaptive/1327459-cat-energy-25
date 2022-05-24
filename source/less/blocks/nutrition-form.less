@@ -122,6 +122,10 @@
     position: relative;
     width: 100%;
     margin-left: 12px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 17px;
+    }
   }
 
   &__input-icon {
@@ -162,12 +166,20 @@
     }
 
     // Модификаторы полей ввода
+
+    &--cat-name {
+      @media (min-width: @tablet-width) {
+        padding-left: 18px;
+      }
+    }
+
+
     &--email {
       padding-right: 37px;
       margin: 0;
 
       @media (min-width: @tablet-width) {
-        margin-left: 7px;
+        padding-left: 23px;
       }
     }
 
@@ -182,6 +194,10 @@
     &--phone {
       padding-right: 37px;
       margin: 0;
+
+      @media (min-width: @tablet-width) {
+        padding-left: 15px;
+      }
     }
 
     &--phone:focus ~ .nutrition-form__input-icon {
@@ -202,6 +218,7 @@
       @media (min-width: @tablet-width) {
         height: 174px;
         margin: 0;
+        padding-left: 20px;
       }
 
       @media (min-width: @desktop-width) {
