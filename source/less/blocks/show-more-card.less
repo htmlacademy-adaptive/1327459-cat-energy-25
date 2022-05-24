@@ -1,0 +1,92 @@
+.show-more-card {
+  display: grid;
+  justify-items: center;
+
+  @media (min-width: @tablet-width) {
+    align-content: flex-end;
+    outline: 2px solid @lightgray;
+    outline-offset: -2px;
+  }
+
+  &__title {
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: @specialdarkgray;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 8px;
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 22px;
+      text-align: center;
+      width: 150px;
+      margin-bottom: 23px;
+    }
+  }
+
+  &__button {
+    order: -1;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 18px;
+
+    @media (min-width: @tablet-width) {
+      width: 65px;
+      height: 65px;
+      margin-bottom: 44px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: @specialgray-5;
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: @tablet-width) {
+        width: 60px;
+      }
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotateZ(90deg);
+    }
+  }
+
+  &__show-all-button {
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+  }
+
+  &__text {
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: @darkgray;
+    margin: 0;
+    margin-bottom: 21px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      width: 170px;
+      min-height: 89px;
+      margin-bottom: 34px;
+    }
+  }
+}

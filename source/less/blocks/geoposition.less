@@ -1,0 +1,23 @@
+.geoposition {
+  align-self: center;
+  width: calc(100% + 2 * @padding-mobile);
+  display: flex;
+  justify-content: center;
+  height: 362px;
+
+  @media (min-width: @tablet-width) {
+    width: calc(100% + 2 * @padding-tablet);
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100vw;
+  }
+
+  &__map {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+}

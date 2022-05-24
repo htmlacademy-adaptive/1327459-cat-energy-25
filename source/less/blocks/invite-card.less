@@ -1,0 +1,91 @@
+.invite-card {
+  background-color: @lightgray;
+  width: 100%;
+  padding-left: @padding-mobile;
+  padding-right: @padding-mobile;
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    padding-left: @padding-tablet;
+    padding-right: @padding-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    align-items: center;
+
+    @media (min-width: @tablet-width) {
+      justify-content: space-between;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 60px;
+      padding-bottom: 59px;
+    }
+
+    @media (min-width: @desktop-width) {
+      box-sizing: border-box;
+      width: 565px;
+      padding: 59px 80px;
+      padding-right: 75px;
+      z-index: 1;
+      background-color: @white;
+      position: absolute;
+      left: 30px;
+      top: 95px;
+    }
+  }
+
+  &__title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: @black;
+    text-transform: uppercase;
+    margin: 0;
+    width: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 170px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__address {
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
+    color: @darkgray;
+    width: 50%;
+
+    br:nth-of-type(2) {
+      display: none;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 160px;
+      text-align: right;
+      font-size: 16px;
+
+      br:nth-of-type(2) {
+        display: inline;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      text-align: left;
+    }
+  }
+
+  &--home {
+    background-color: transparent;
+  }
+}

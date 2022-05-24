@@ -1,0 +1,37 @@
+.button {
+  background-color: @basic-color;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 10px 10px;
+
+  &:hover {
+    background-color: @basic-color-2;
+  }
+
+  &:active {
+    color: rgba(@white, 0.3);
+  }
+
+  &--secondary {
+    background-color: @lightgray;
+    color: @darkgray;
+
+    &:hover {
+      background-color: darken(@lightgray, 2.74);
+    }
+
+    &:active {
+      color: rgba(@darkgray, 0.3);
+    }
+  }
+}
