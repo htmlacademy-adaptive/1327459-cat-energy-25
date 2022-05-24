@@ -12,7 +12,7 @@
     column-gap: 60px;
     row-gap: 141px;
     justify-items: stretch;
-    padding-top: 80px;
+    padding-top: 125px;
     padding-bottom: 34px;
   }
 
@@ -40,7 +40,11 @@
     @media (min-width: @tablet-width) {
       border: none;
       width: auto;
-      padding: 10px 36px 39px 36px;
+      padding: 0 37px 39px 39px;
+
+      &:first-child {
+        border: none;
+      }
     }
 
     @media (min-width: @desktop-width) {
