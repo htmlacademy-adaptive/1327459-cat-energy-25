@@ -13,6 +13,11 @@
     padding-bottom: 46px;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 26px;
+  }
+
   &__title {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
@@ -72,22 +77,18 @@
 
       &--organic::after {
         content: "1";
-        // right: 5px;
       }
 
       &--simple::after {
         content: "2";
-        // right: -14px;
       }
 
       &--easy::after {
         content: "3";
-        // right: -16px;
       }
 
       &--quick::after {
         content: "4";
-        // right: -18px;
       }
     }
 
@@ -142,11 +143,12 @@
       grid-template-columns: 1fr 1fr;
       row-gap: 37px;
       column-gap: 60px;
+      justify-items: flex-start;
     }
 
     @media (min-width: @desktop-width) {
-      grid-template-columns: 230px 230px 230px 230px;
-      column-gap: 0;
+      grid-template-columns: min-content min-content min-content min-content;
+      column-gap: normal;
       justify-content: space-between;
     }
   }

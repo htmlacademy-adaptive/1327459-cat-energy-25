@@ -38,7 +38,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding: 43px 170px 35px 110px;
+      padding: 43px 171px 52px 110px;
       background-color: transparent;
       box-sizing: border-box;
       width: calc(@desktop-width / 2);
@@ -68,6 +68,8 @@
       width: calc(@desktop-width / 2);
       margin-top: -@content-shift;
       padding: 0;
+      padding-left: 20px;
+      padding-right: 21px;
     }
   }
 
@@ -119,11 +121,18 @@
 
     @media (min-width: @desktop-width) {
       margin: 0;
+      margin-bottom: 24px;
       height: 511px;
+      align-self: flex-start;
     }
   }
 
   &__range {
     align-self: center;
+
+    @media (min-width: @desktop-width) {
+      align-self: flex-start;
+      margin-left: 7px;
+    }
   }
 }
