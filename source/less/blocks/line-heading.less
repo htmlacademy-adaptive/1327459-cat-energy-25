@@ -6,13 +6,23 @@
     content: "";
     border-bottom: 2px solid @basic-color;
     width: 100%;
-    height: 0.5em;
+    height: 0.65em;
     position: absolute;
     top: 0;
     margin-left: 22px;
   }
 
   @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      border-bottom: 2px solid @basic-color;
+      width: 100%;
+      height: 0.65em;
+      position: absolute;
+      top: 0;
+      margin-left: 35px;
+    }
+
     &::before {
       content: "";
       border-bottom: 2px solid @basic-color;
@@ -20,7 +30,7 @@
       height: 0.5em;
       position: absolute;
       top: 0;
-      margin-left: calc(-100% - 22px);
+      margin-left: calc(-100% - 35px);
     }
   }
 }

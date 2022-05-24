@@ -341,6 +341,13 @@
 
 // Модификатор филдсета "Данные владельца"
 .nutrition-form__group--owner-info {
+  .nutrition-form__legend {
+    &::after {
+      content: "";
+      margin-left: 45px;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     .nutrition-form__list {
       display: grid;
@@ -373,7 +380,10 @@
 // Модификатор филдсета "Дополнительно"
 .nutrition-form__group--extra {
   color: @black;
-  margin-bottom: 58px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 58px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 66px;
