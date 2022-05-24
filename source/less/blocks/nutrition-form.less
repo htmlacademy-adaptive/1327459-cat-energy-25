@@ -72,10 +72,6 @@
       padding-right: calc(@padding-tablet + @form-padding);
       margin-left: calc(-@padding-tablet - @form-padding);
       margin-bottom: 76px;
-
-      br {
-        display: none;
-      }
     }
 
     @media (min-width: @desktop-width) {
@@ -165,9 +161,14 @@
       outline-offset: -2px;
     }
 
+    // Модификаторы полей ввода
     &--email {
       padding-right: 37px;
       margin: 0;
+
+      @media (min-width: @tablet-width) {
+        margin-left: 7px;
+      }
     }
 
     &--email:focus ~ .nutrition-form__input-icon {
@@ -191,7 +192,7 @@
       color: @error-color;
     }
 
-    &--comment {
+    &--textarea {
       margin: 0;
       resize: none;
       height: 150px;
@@ -200,12 +201,14 @@
 
       @media (min-width: @tablet-width) {
         height: 174px;
+        margin: 0;
       }
 
       @media (min-width: @desktop-width) {
         width: 1220px;
       }
     }
+    //
   }
 
   &__button {
@@ -219,9 +222,10 @@
     @media (min-width: @tablet-width) {
       justify-self: flex-start;
       min-width: 282px;
-      margin-bottom: 0;
+      margin: 0;
       font-size: 20px;
       line-height: 20px;
+      height: 52px;
     }
 
     @media (min-width: @desktop-width) {
@@ -338,9 +342,34 @@
 }
 //
 
+// Модификатор филдсета "Комментарий"
+.nutrition-form__group--comment {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+  }
+}
+//
+
 // Модификатор филдсета "Дополнительно"
 .nutrition-form__group--extra {
   color: @black;
+  margin-bottom: 58px;
+
+  // @media (min-width: @tablet-width) {
+  //   margin-bottom: 20px;
+  // }
+
+  .nutrition-form__label {
+    @media (min-width: @tablet-width) {
+      padding-left: 59px;
+    }
+  }
+
+  .nutrition-form__legend {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 63px;
+    }
+  }
 
   .nutrition-form__list {
     padding: 2px 0;
@@ -348,8 +377,9 @@
     @media (min-width: @tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: 20px;
-      row-gap: 25px;
+      column-gap: 60px;
+      row-gap: 42px;
+      padding: 0;
     }
 
     @media (min-width: @desktop-width) {
