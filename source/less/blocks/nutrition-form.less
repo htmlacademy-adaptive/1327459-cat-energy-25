@@ -29,6 +29,7 @@
     padding-left: 0;
     padding-right: 0;
     grid-template-columns: 610px 610px;
+    padding-bottom: 82px;
   }
 
   &__group {
@@ -45,7 +46,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      margin-bottom: 67px;
+      margin-bottom: 69px;
     }
   }
 
@@ -314,7 +315,9 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 2 / 3;
-    margin-left: 39px;
+    margin: 0;
+    margin-left: 40px;
+    align-self: flex-start;
     width: auto;
 
     .nutrition-form__list {
@@ -372,9 +375,9 @@
   color: @black;
   margin-bottom: 58px;
 
-  // @media (min-width: @tablet-width) {
-  //   margin-bottom: 20px;
-  // }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 66px;
+  }
 
   .nutrition-form__label {
     @media (min-width: @tablet-width) {
@@ -401,7 +404,8 @@
 
     @media (min-width: @desktop-width) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      column-gap: 104px;
+      justify-items: flex-start;
+      column-gap: 80px;
     }
   }
 
