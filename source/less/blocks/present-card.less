@@ -35,35 +35,35 @@
       background-image: linear-gradient(to left, fade(@basic-color, 85%), fade(@basic-color, 85%)), url("../img/present-card-desktop@2x.jpg");
     }
   }
+}
 
-  &__text {
-    text-align: center;
-    margin: 0;
+.present-card__text {
+  text-align: center;
+  margin: 0;
+  width: 180px;
+  flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
     width: 180px;
-    flex-grow: 1;
-
-    @media (min-width: @tablet-width) {
-      text-align: left;
-      width: 180px;
-      flex-grow: 0;
-    }
-
-    @media (min-width: @desktop-width) {
-      text-align: center;
-    }
+    flex-grow: 0;
   }
 
-  &__icon {
-    margin-top: 38px;
-    margin-bottom: 49px;
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      margin: 0;
-    }
+.present-card__icon {
+  margin-top: 38px;
+  margin-bottom: 49px;
 
-    @media (min-width: @desktop-width) {
-      margin-bottom: 46px;
-      margin-right: 0;
-    }
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 46px;
+    margin-right: 0;
   }
 }

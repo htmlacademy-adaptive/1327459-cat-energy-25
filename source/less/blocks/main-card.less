@@ -27,128 +27,128 @@
     min-height: 500px;
     padding-top: 107px;
   }
+}
 
-  &__background {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    height: 302px;
-    width: calc(100% + 2 * @padding-mobile);
-    background-image: linear-gradient(to left, fade(@basic-color, 85%), fade(@basic-color, 85%)), url("../img/main-card-background-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% auto;
+.main-card__background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  height: 302px;
+  width: calc(100% + 2 * @padding-mobile);
+  background-image: linear-gradient(to left, fade(@basic-color, 85%), fade(@basic-color, 85%)), url("../img/main-card-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to left, fade(@basic-color, 85%), fade(@basic-color, 85%)), url("../img/main-card-background-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    height: 694px;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: linear-gradient(to left, fade(@basic-color, 85%), fade(@basic-color, 85%)), url("../img/main-card-background-desktop.jpg");
+    background-size: 50% auto;
+    background-position: right center;
 
     @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(to left, fade(@basic-color, 85%), fade(@basic-color, 85%)), url("../img/main-card-background-mobile@2x.jpg");
-    }
-
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
-
-    @media (min-width: @desktop-width) {
-      display: block;
-      height: 694px;
-      width: 100vw;
-      left: 0;
-      right: 0;
-      margin: auto;
-      background-image: linear-gradient(to left, fade(@basic-color, 85%), fade(@basic-color, 85%)), url("../img/main-card-background-desktop.jpg");
-      background-size: 50% auto;
-      background-position: right center;
-
-      @media (min-resolution: 2dppx) {
-        background-image: linear-gradient(to left, fade(@basic-color, 85%), fade(@basic-color, 85%)), url("../img/main-card-background-desktop@2x.jpg");
-      }
+      background-image: linear-gradient(to left, fade(@basic-color, 85%), fade(@basic-color, 85%)), url("../img/main-card-background-desktop@2x.jpg");
     }
   }
+}
 
-  &__title {
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 36px;
+.main-card__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @black;
+    text-align: left;
+    margin-bottom: 42px;
+    margin-left: 87px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin: 0;
-    margin-bottom: 25px;
-    text-align: center;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      font-size: 60px;
-      line-height: 60px;
-      color: @black;
-      text-align: left;
-      margin-bottom: 42px;
-      margin-left: 87px;
-    }
+.main-card__text {
+  margin: 0;
+  margin-bottom: 29px;
+  text-transform: uppercase;
+  text-align: center;
 
-    @media (min-width: @desktop-width) {
-      margin: 0;
-    }
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+    text-align: left;
+    margin-bottom: 49px;
+    margin-left: 88px;
   }
 
-  &__text {
+  @media (min-width: @desktop-width) {
     margin: 0;
-    margin-bottom: 29px;
-    text-transform: uppercase;
-    text-align: center;
+    align-self: flex-start;
+    margin-top: 33px;
+    margin-bottom: 33px;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      font-size: 20px;
-      line-height: 20px;
-      color: @black;
-      text-align: left;
-      margin-bottom: 49px;
-      margin-left: 88px;
-    }
+.main-card__image {
+  height: 270px;
+  margin-bottom: 3px;
 
-    @media (min-width: @desktop-width) {
-      margin: 0;
-      align-self: flex-start;
-      margin-top: 33px;
-      margin-bottom: 33px;
-    }
+  img {
+    display: block;
   }
 
-  &__image {
-    height: 270px;
-    margin-bottom: 3px;
-
-    img {
-      display: block;
-    }
-
-    @media (min-width: @tablet-width) {
-      height: 609px;
-      order: 1;
-      margin-bottom: 0;
-      margin-top: -83px;
-      z-index: -1;
-    }
-
-    @media (min-width: @desktop-width) {
-      height: 499px;
-      grid-column: 2 / 3;
-      grid-row: 1 / -1;
-      margin-left: -100px;
-      margin-bottom: 83px;
-    }
+  @media (min-width: @tablet-width) {
+    height: 609px;
+    order: 1;
+    margin-bottom: 0;
+    margin-top: -83px;
+    z-index: -1;
   }
 
-  &__button {
-    width: 100%;
+  @media (min-width: @desktop-width) {
+    height: 499px;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    margin-left: -100px;
+    margin-bottom: 83px;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      max-width: max-content;
-      font-size: 20px;
-      line-height: 20px;
-      margin-left: 90px;
-      padding: 17px 27px;
-    }
+.main-card__button {
+  width: 100%;
 
-    @media (min-width: @desktop-width) {
-      margin: 0;
-      margin-top: -19px;
-      margin-bottom: 19px;
-    }
+  @media (min-width: @tablet-width) {
+    max-width: max-content;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 90px;
+    padding: 17px 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-top: -19px;
+    margin-bottom: 19px;
   }
 }
