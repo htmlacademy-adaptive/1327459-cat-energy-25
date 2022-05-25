@@ -155,6 +155,11 @@
   position: relative;
   padding-right: 57px;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &:hover::after {
     background-image: url("../img/icon-arrow-hover.svg");
   }
@@ -175,11 +180,9 @@
     background-image: url("../img/icon-arrow.svg");
     background-repeat: no-repeat;
     background-position: left center;
-  }
 
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-    right: 0;
+    @media (min-width: @tablet-width) {
+      right: 0;
+    }
   }
 }
