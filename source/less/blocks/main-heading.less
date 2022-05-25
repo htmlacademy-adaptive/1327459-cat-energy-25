@@ -1,5 +1,5 @@
 .main-heading {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
@@ -17,16 +17,16 @@
     padding-left: 0;
     padding-top: 71px;
   }
-}
 
-.main-heading--modify {
-  @media (min-width: @tablet-width) {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  &--modify {
+    @media (min-width: @tablet-width) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
 
-  @media (min-width: @desktop-width) {
-    padding-left: 0;
-    padding-right: 0;
+    @media (min-width: @desktop-width) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }

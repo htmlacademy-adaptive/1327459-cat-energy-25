@@ -8,43 +8,45 @@
       border-color: @specialgray-7;
     }
   }
+}
 
-  &__mark {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    box-sizing: border-box;
-    width: 30px;
-    height: 30px;
-    border: 1px solid @specialgray;
+.control__mark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @specialgray;
 
-    @media (min-width: @tablet-width) {
-      width: 40px;
-      height: 40px;
-    }
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
   }
+}
 
-  &__input:focus + .control__mark {
+.control__input {
+  &:focus + .control__mark {
     outline: 2px solid @darkgray;
   }
 
-  &__input:disabled ~ * {
+  &:disabled ~ * {
     opacity: 0.3;
     cursor: not-allowed;
   }
 
-  &__input[type="checkbox"]:checked + .control__mark {
-    background-image: url("../../img/checkbox-checked-icon.svg");
+  &[type="checkbox"]:checked + .control__mark {
+    background-image: url("../img/checkbox-checked-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &__input[type="radio"] + .control__mark {
+  &[type="radio"] + .control__mark {
     border-radius: 50%;
   }
 
-  &__input[type="radio"]:checked + .control__mark::before {
+  &[type="radio"]:checked + .control__mark::before {
     content: "";
     position: absolute;
     left: 50%;
